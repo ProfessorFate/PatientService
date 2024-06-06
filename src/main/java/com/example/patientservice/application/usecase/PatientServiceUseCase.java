@@ -8,7 +8,7 @@ public interface PatientServiceUseCase {
 
     List<Patient> getPatients();
 
-    Patient getPatientById(Long id);
+    Patient getPatientById(String id);
 
     void savePatient(Patient patient);
 

@@ -35,7 +35,7 @@ public class PatientController {
     @Operation(summary = "Запрос на получение одного Пациента по id")
     @GetMapping(ROOT_API_READ_ONE)
     @PreAuthorize("hasAnyAuthority('ROLE_PATIENT')")
-    Patient getPatientById(@PathVariable Long id) {
+    Patient getPatientById(@PathVariable String id) {
         return patientService.getPatientById(id);
 
     }
@@ -76,7 +76,7 @@ public class PatientController {
     @Operation(summary = "Запрос на удаление Пациента по id")
     @DeleteMapping(ROOT_API_DELETE)
     @PreAuthorize("hasAnyAuthority('ROLE_PRACTITIONER')")
-    ResponseEntity<String> deletePatient(@PathVariable Long id) {
+    ResponseEntity<String> deletePatient(@PathVariable String id) {
         try {
             patientService.deletePatient(patientService.getPatientById(id));
             return new ResponseEntity<>("Пациент удален", HttpStatus.OK);

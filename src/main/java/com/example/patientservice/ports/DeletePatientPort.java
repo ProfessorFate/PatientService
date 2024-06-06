@@ -2,5 +2,5 @@ package com.example.patientservice.ports;
 
 public interface DeletePatientPort {
 
-    void deletePatient(Long id);
+    void deletePatient(String id);
 }

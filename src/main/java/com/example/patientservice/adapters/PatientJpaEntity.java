@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public class PatientJpaEntity implements Serializable {
     @Id
     @Column(name = "ID")
-    private Long id;
+    private String id;
 
     @Column(name = "NAME")
     private String name;

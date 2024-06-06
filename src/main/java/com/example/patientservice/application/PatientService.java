@@ -30,7 +30,7 @@ public class PatientService implements PatientServiceUseCase {
     }
 
     @Override
-    public Patient getPatientById(Long id) {
+    public Patient getPatientById(String id) {
         return searchPatientPort.getPatientById(id);
     }
 

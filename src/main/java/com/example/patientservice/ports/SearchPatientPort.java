@@ -8,5 +8,5 @@ public interface SearchPatientPort {
 
     List<Patient> searchPatient();
 
-    Patient getPatientById(Long id);
+    Patient getPatientById(String id);
 }

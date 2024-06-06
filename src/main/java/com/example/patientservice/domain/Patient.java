@@ -15,13 +15,13 @@ import java.time.LocalDateTime;
 @Schema(description = "Объект Пациент")
 public class Patient {
 
-    @Schema(description = "Идентификационный номер Пациента", name = "id", type ="Long", example = "3232fdf34")
-    private Long id;
+    @Schema(description = "Идентификационный номер Пациента", name = "id", type = "String", example = "d8ff176f-bd0a-4b8e-b329-871952e32e1f")
+    private String id;
 
-    @Schema(description = "ФИО Пациента", name = "name", type ="String", example = "Иванов Иван Иванович")
+    @Schema(description = "ФИО Пациента", name = "name", type = "String", example = "Иванов Иван Иванович")
     private String name;
 
-    @Schema(description = "Пол Пациента", name = "gender", type ="String", example = "male")
+    @Schema(description = "Пол Пациента", name = "gender", type = "String", example = "male")
     private String gender;
 
     @Schema(description = "Идентификационный номер Пациента", name = "birthDate", type ="LocalDateTime", example = "2024-01-13 18:25:43")

@@ -32,7 +32,7 @@ public class PatientPersistenceAdapter implements SearchPatientPort, SavePatient
 
     @Override
     @Transactional
-    public Patient getPatientById(Long id) {
+    public Patient getPatientById(String id) {
         Optional<PatientJpaEntity> getOnePatient = patientRepository.findById(id);
 
         return mapper.toDto(getOnePatient.get());
@@ -58,7 +58,7 @@ public class PatientPersistenceAdapter implements SearchPatientPort, SavePatient
 
     @Override
     @Transactional
-    public void deletePatient(Long id) {
+    public void deletePatient(String id) {
         patientRepository.deleteById(id);
 
     }
