@@ -69,7 +69,7 @@ public class PatientController {
             return new ResponseEntity<>("Пациент обновлен", HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
-            return new ResponseEntity<>("Пациент не обнавлен", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Пациент не обновлен", HttpStatus.BAD_REQUEST);
         }
     }
 
@@ -87,12 +87,10 @@ public class PatientController {
     }
 
 
-    @GetMapping("/api/readTest")
-    @PreAuthorize("hasAnyAuthority('ROLE_PRACTITIONER')")
-    List<Patient> save100Patient() {
-
-        return patientService.save100Patients();
+    @Operation(summary = "Запрос на создание и получение 100 сгенерированных пациентов")
+    @GetMapping(ROOT_API_CREATE_ONE_HUNDRED_PATIENT)
+    List<Patient> createOneHundredPatient() {
+        return patientService.createOneHundredPatient();
     }
-
 
 }

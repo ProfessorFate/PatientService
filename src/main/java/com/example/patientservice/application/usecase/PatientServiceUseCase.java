@@ -16,5 +16,5 @@ public interface PatientServiceUseCase {
 
     void deletePatient(Patient patient);
 
-    List<Patient> save100Patients();
+    List<Patient> createOneHundredPatient();
 }
