@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import java.lang.annotation.*;
 
 /**
- * Indicates that an annotated class is a "use case".
+ * Indicates that an annotated class is a "persistence" adapter.
  *
  * @author Ismailyan Zahar
  * @since 0.3.0
