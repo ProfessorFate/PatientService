@@ -1,15 +1,28 @@
-version: '3.9'
+version: '3.1'
+
+volumes:
+  db_demo:
 
 services:
   db:
-    image: 'postgres'
-    container_name: 'postgres'
+    image: postgres:16.0
+    restart: always
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=postgres
+    volumes:
+      - db_demo:/var/lib/postgresql/data
+
+
   app:
-    build: ./
-    container_name: 'java-app'
+    build: .
     ports:
       - "8080:8080"
+    depends_on:
+      - db
+    container_name: 'java-app'
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres

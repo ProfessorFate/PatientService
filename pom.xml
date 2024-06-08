@@ -90,9 +90,9 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.example.patientservice.PatientServiceApplication</mainClass>
+<!--                            <addClasspath>true</addClasspath>-->
+<!--                            <classpathPrefix>lib/</classpathPrefix>-->
+<!--                            <mainClass>com.example.patientservice.PatientServiceApplication</mainClass>-->
                         </manifest>
                     </archive>
                 </configuration>
