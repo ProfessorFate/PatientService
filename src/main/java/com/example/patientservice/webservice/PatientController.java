@@ -34,7 +34,7 @@ public class PatientController {
 
     @Operation(summary = "Запрос на получение одного Пациента по id")
     @GetMapping(ROOT_API_READ_ONE)
-    @PreAuthorize("hasAnyAuthority('ROLE_PATIENT')")
+    @PreAuthorize("hasAnyAuthority('ROLE_PATIENT', 'ROLE_PRACTITIONER')")
     Patient getPatientById(@PathVariable String id) {
         return patientService.getPatientById(id);
 
